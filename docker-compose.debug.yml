@@ -1,0 +1,12 @@
+version: '2.1'
+
+services:
+  copy-tags-from-ec2-to-ebs:
+    image: copy-tags-from-ec2-to-ebs
+    environment:
+      - GOOS=linux
+      - GOARCH=amd64
+    build:
+      context: .
+      dockerfile: Dockerfile
+
